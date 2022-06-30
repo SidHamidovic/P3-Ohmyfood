@@ -1,0 +1,233 @@
+@import "../libs/normalize.scss";
+@import "../libs/mixins.scss";
+@import "../libs/variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+            /* GENERAL */ 
+body {
+    @include roboto;
+}
+h1 {
+    @include big-bold;
+}
+p {
+    @include lil-thin;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.center {
+    @include disflex;
+    align-items: center; 
+    flex-direction: column;
+}
+.main-text {
+    @include lil-bold;
+}
+
+
+            /* HEADER */ 
+
+#fonctionnement h1 {
+    padding-top: 40px;
+}
+.header-logo {
+    @include shrik;
+    padding: 20px 0 10px 0;
+}
+.logo {
+    @include shrik;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+
+            /* FORMULAIRE*/
+
+.grey-BG {
+    background-color: #F2F2F2F2;
+    padding-bottom: 50px;
+}
+.location-bar {
+    @include disflex;
+    width: 100%;
+    background-color: lightgray;
+    padding: 10px 0px;
+    justify-content: center;
+}
+.location-textzone {
+    background-color: lightgrey;
+    /* COLOR */
+    border: none;
+    padding-left: 10px;
+    @include lil-bold;
+}
+.location-icon {
+    color: rgb(50, 49, 49);
+    padding-left: 70px;
+} 
+form {
+    h1 {
+        @include disflex;
+        margin:10px 20px 10px 40px;
+    }
+    p {
+        @include disflex;
+        margin:10px 20px 10px 40px;
+    }
+}
+.form-titles {
+    margin:30px 20px 40px 40px;
+    @include disflex;
+}
+.search-button {
+    border: transparent;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: $primary;
+    background-image: linear-gradient(-5deg, $primary, $secondary);
+}
+
+            /* FONCTIONNEMENT */
+
+#button {
+    padding: 20px;
+    li {
+        position: relative;
+        padding: 25px;
+        border: 1px black;
+        border-radius: 20px;
+        background-color: $lightgrey;
+        box-shadow: 3px 3px 8px $shadow;
+        margin: 20px 10px;
+
+        &::before {
+            content: "1";
+            @include disflex;
+            background-color: $primary;
+            color: $white;
+            width: 25px;
+            height: 25px;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 20px;
+            left: -15px;
+        }
+        i {
+            padding: 0px 15px 0px 5px;
+            color: rgba(89, 89, 89, 0.878);
+        
+            &:hover {
+                color: $primary;
+            }    
+        }
+    }
+}
+
+            /* RESTAURANTS */ 
+
+.restaurants {
+    @include disflex;
+    flex-direction: column;
+    padding: 20px 20px 50px 20px;
+
+}
+.cards-frame {
+    border: transparent;
+    background-color: white;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px $shadow;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.card-shape {
+    display: block;
+    width: 100%;
+    height: 150px;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.new {
+    @include disflex;
+    margin: 5% 0 0 62%;
+    position: absolute;
+    background-color: $tertiary;
+    padding: 7px 10px;
+    color: #278870;
+    border-radius: 2px;
+    font-weight: 500;
+}
+.card-description {
+    @include disflex;
+    justify-content: space-between;
+    padding: 10px 0px 0px 0px;
+}
+.card-text {
+    @include disflex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+.favorite {
+    @include disflex;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    i {
+        border: none;
+        background-color: #fff;
+        font-size: 25px;
+    }
+}
+.locations {
+    @include lil-thin;
+    padding: 5px 0px 5px 0px;
+}
+.cap-letter {
+    text-transform: capitalize;
+}
+.restaurants h1 {
+    padding: 20px 0px 0px 0px;
+}
+            /* FOOTER */ 
+
+footer {
+    background-color: $darkgrey;
+    padding-left: 20px;
+    @include lil-bold;
+    span {
+        color: $white;
+    }
+    i {
+        color: $white;
+        padding: 0px 7px 0px 0px;
+    }
+}
+footer ul {
+    padding: 0px 0px 20px 0px;
+}
+
+footer li {
+    margin: 10px 0px;
+}
+
+#lil-logo {
+    @include disflex;
+    @include shrik;
+    font-size: 20px;
+    font-weight: 500;
+    color: $white;
+    padding: 20px 0px 10px 0px;
+}
